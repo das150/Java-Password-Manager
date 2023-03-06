@@ -19,7 +19,8 @@ import javax.swing.UIManager;
 
 public class PasswordManager extends JFrame {
     public static final String masterPassword = "$2a$10$kASzua7EUyRa4d8CWY7GxOZruDo0/jMJjQyp8WjwYPlaYU95fQi.e"; // turtle
-    private static final String imageFile = "icon.png";
+    public static final String databaseFile = "accounts.xml";
+    public static final String imageFile = "icon.png";
     private int loginAttempts = 0;
 
     private JLabel label;
