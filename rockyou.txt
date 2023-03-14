@@ -1,0 +1,8 @@
+Example
+Admin
+Password
+password
+pass123
+
+**I can not upload such a large file to GitHub, so you can download rockyou.txt from the following link**
+https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
