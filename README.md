@@ -1,7 +1,7 @@
 # Java-Password-Manager
 A password manager made with Java for my IB Computer Science SL class.
 
-An example .jar is provided.
+An example .jar is provided. Accounts.xml and rockyou.txt are required dependencies.
 
 To create this project on your own, download the files, open the PasswordManager.java and change the masterPassword to a BCrpyt based on your password (using https://bcrypt-generator.com/)
 
