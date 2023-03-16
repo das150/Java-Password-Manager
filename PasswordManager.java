@@ -4,6 +4,8 @@ import java.awt.GridBagLayout;
 import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,9 +14,10 @@ import javax.swing.JPasswordField;
 import javax.swing.UIManager;
 
 /**
- * A GUI prompts user for the master password (generate your own at
- * https://bcrypt-generator.com/). CHANGING THE MASTER PASSWORD (text, not
+ * A GUI prompts user for the master password CHANGING THE MASTER PASSWORD
+ * (text, not
  * bcrypt) REMOVES ACCESS TO THE ACCOUNTS.
+ * -- Prompts user to create master password if one does not exist.
  * -- If the user enters the correct password, the prompt is replaced by the
  * Password Manager's main menu.
  * -- If the user enters an incorrect password, an error message is displayed
@@ -25,18 +28,13 @@ import javax.swing.UIManager;
 
 public class PasswordManager extends JFrame {
     // Constants
-    public static final String masterPassword = "$2a$12$u/EVN0egor43./KIk6zw6.ON0pOrLyV6B2WT6zFEaeObDbEAjqpEK"; // Password:
-                                                                                                                // master
-                                                                                                                // --
-                                                                                                                // Generate
-                                                                                                                // your
-                                                                                                                // own:
-                                                                                                                // https://bcrypt-generator.com/
     public static final String databaseFile = "accounts.xml";
     public static final String rockYouFile = "rockyou.txt";
     public static final String imageFile = "icon.png";
+    public static final String masterPasswordFile = "masterpassword.txt";
 
     // Variables
+    public static String masterPassword;
     private int loginAttempts = 0;
     private JLabel label;
     private JPasswordField passwordField;
@@ -49,6 +47,7 @@ public class PasswordManager extends JFrame {
             e.printStackTrace();
         }
 
+        // Initialize the JFrame
         PasswordManager prompt = new PasswordManager();
         prompt.setTitle("Password Manager");
         prompt.setSize(500, 300);
@@ -57,6 +56,21 @@ public class PasswordManager extends JFrame {
         prompt.setLayout(new GridBagLayout());
         prompt.setVisible(true);
         prompt.setIconImage(new ImageIcon(imageFile).getImage());
+
+        // Get for master password BCrypt
+        try {
+            Path filePath = Path.of(masterPasswordFile);
+            String content = Files.readString(filePath);
+            masterPassword = content.replaceAll("\\s", "");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // If master password does not exist, give prompt to create one
+        if (masterPassword.length() == 0) {
+            new CreateMasterPassword();
+        }
+
     }
 
     // Constructor
@@ -74,8 +88,26 @@ public class PasswordManager extends JFrame {
                 char[] password = passwordField.getPassword();
                 String passwordString = new String(password);
 
+                // Get master password
+                try {
+                    Path filePath = Path.of(masterPasswordFile);
+                    String content = Files.readString(filePath);
+                    masterPassword = content.replaceAll("\\s", "");
+                } catch (Exception b) {
+                    b.printStackTrace();
+                }
+
+                if (masterPassword.length() == 0) {
+                    JOptionPane.showOptionDialog(null,
+                            "You need to create a master password first!",
+                            "No Master Password",
+                            JOptionPane.DEFAULT_OPTION,
+                            JOptionPane.ERROR_MESSAGE, null, new String[] { "OK" }, null);
+                    return;
+                }
+
                 // Check if password is correct
-                if (org.mindrot.jbcrypt.BCrypt.checkpw(passwordString, PasswordManager.masterPassword)) { // http://www.mindrot.org/projects/jBCrypt/
+                if (org.mindrot.jbcrypt.BCrypt.checkpw(passwordString, masterPassword)) { // http://www.mindrot.org/projects/jBCrypt/
                     // Hande correct password: send password to AES, dispose window, and open
                     // PasswordManagerMenu
                     AES key = new AES();
