@@ -11,4 +11,4 @@ pass
 **This file is a placeholder due to file size limitations.
 You will need to download the original from
 https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt 
-to achieve full functionality**
+to have full functionality**
