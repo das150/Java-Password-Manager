@@ -306,7 +306,7 @@ public class CheckPasswords extends javax.swing.JFrame {
                         }
                         // If the password score is low, add an update to the text area
                         else if (passwordScore <= 65) {
-                            updates.append("\nThe password for '" + accountName + "' recieved a password score of "
+                            updates.append("\nThe password for '" + accountName + "' received a password score of "
                                     + passwordScore + "/100, a low score. We recommend changing this password.\n--");
                             updates.setCaretPosition(updates.getDocument().getLength());
                         }
