@@ -108,7 +108,7 @@ public class PasswordManager extends JFrame {
 
                 // Check if password is correct
                 if (org.mindrot.jbcrypt.BCrypt.checkpw(passwordString, masterPassword)) { // http://www.mindrot.org/projects/jBCrypt/
-                    // Hande correct password: send password to AES, dispose window, and open
+                    // Handle correct password: send password to AES, dispose window, and open
                     // PasswordManagerMenu
                     AES key = new AES();
                     try {
