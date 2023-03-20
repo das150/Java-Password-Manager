@@ -353,6 +353,8 @@ public class CheckPasswords extends javax.swing.JFrame {
             // If no issue messages are displayed, show positive message
             if (updates.getText().equals("")) {
                 updates.setText("Your passwords appear to be secure!");
+                progressBar.setValue(100);
+                percentLabel.setText("100% Complete!");
             }
         }
     });
