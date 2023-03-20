@@ -16,7 +16,7 @@ import org.w3c.dom.NodeList;
  * Manager's menu.
  */
 
-class DeleteAccount {
+public class DeleteAccount {
 
     /**
      * Method that deletes the selected account from the database.
