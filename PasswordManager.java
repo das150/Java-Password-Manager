@@ -24,6 +24,20 @@ import javax.swing.UIManager;
  * and the password field is cleared.
  * -- The user has three attempts. Once they reach this limit, the window
  * closes.
+ * 
+ * -------
+ * Possible extentions:
+ * - Require strong master password
+ * - When the user double clicks on the account, the details open
+ * - When the user is editing the notes and tries to close the window without
+ * saving, show a confirmation box (if button text = "Update")
+ * - Right click to paste
+ * - Add information about making strong passwords
+ * - Auto-populate websites (check if possible)
+ * - Ability to export unencrypted passwords
+ * - Ability to import passwords in bulk
+ * - Prompt user about expired passwords as soon as they log in
+ * - Password history for each account
  */
 
 public class PasswordManager extends JFrame {
