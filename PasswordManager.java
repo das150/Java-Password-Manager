@@ -39,6 +39,7 @@ import javax.swing.UIManager;
  * - Prompt user about expired passwords as soon as they log in
  * - Password history for each account
  * - Make "Add Account" window smaller + adjustable
+ * - Add a time limit after 3 incorrect logins
  */
 
 public class PasswordManager extends JFrame {
