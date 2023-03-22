@@ -38,6 +38,7 @@ import javax.swing.UIManager;
  * - Ability to import passwords in bulk
  * - Prompt user about expired passwords as soon as they log in
  * - Password history for each account
+ * - Make "Add Account" window smaller + adjustable
  */
 
 public class PasswordManager extends JFrame {
