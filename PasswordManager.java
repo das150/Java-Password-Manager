@@ -73,7 +73,7 @@ public class PasswordManager extends JFrame {
         prompt.setVisible(true);
         prompt.setIconImage(new ImageIcon(imageFile).getImage());
 
-        // Get BCrypt for master password BCrypt
+        // Get BCrypt for master password
         try {
             Path filePath = Path.of(masterPasswordFile);
             String content = Files.readString(filePath);
