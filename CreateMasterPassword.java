@@ -204,7 +204,7 @@ public class CreateMasterPassword extends JFrame {
     }
 
     /**
-     * Updates the password for the selected account.
+     * Updates the master password.
      */
     private void updatePasswordButtonMouseClicked(java.awt.event.MouseEvent evt) {
         // Check if the new and confirm passwords match
@@ -225,7 +225,7 @@ public class CreateMasterPassword extends JFrame {
                     String pw_hash = org.mindrot.jbcrypt.BCrypt.hashpw(newMasterPassword,
                             org.mindrot.jbcrypt.BCrypt.gensalt());
 
-                    PrintWriter masterPasswordFile = new PrintWriter("MasterPassword.txt");
+                    PrintWriter masterPasswordFile = new PrintWriter(PasswordManager.masterPasswordFile);
                     masterPasswordFile.println(pw_hash);
                     masterPasswordFile.close();
 
