@@ -26,7 +26,7 @@ import javax.swing.UIManager;
  * closes.
  * 
  * -------
- * Possible extentions:
+ * Possible extensions:
  * - Require strong master password
  * - When the user double clicks on the account, the details open
  * - When the user is editing the notes and tries to close the window without
