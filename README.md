@@ -1,5 +1,5 @@
 # Java Password Manager
-This is a password manager application and IB documentation (WILL UPLOAD AFTER M23 IB EXAMS) that I made for my IB Computer Science IA. It helps users store and manage passwords and other sensitive information. I scored a 32/34 (7) from my teacher.
+This is a password manager application and IB documentation (WILL UPLOAD AFTER M23 IB EXAMS) that I made for my IB Computer Science IA. I scored a 32/34 (7) from my teacher.
 
 Features include:
 - A master password is required to access the main menu; the user can create one if one
