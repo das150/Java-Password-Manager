@@ -20,7 +20,7 @@ key.
 
 The rockyou.txt file is a placeholder due to file size limitations; you will need to download the original from https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt if you wish to have full functionality.
 
-You can then create a new .jar from the files. Java 17 or later is required, else a runtime error will occur).
+You can then create a new .jar from the files. Java 17 or later is required, else a runtime error will occur.
 
 ## Screenshots
 ![1](https://github.com/das150/Java-Password-Manager/assets/83658956/038a027e-3f72-4b4a-a8ab-cac625d06f06)
