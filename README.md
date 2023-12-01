@@ -1,5 +1,5 @@
 # Java Password Manager
-This is a password manager application and IB documentation that I made for my IB Computer Science IA. I scored a 32/34 (7) from my teacher.
+This is a password manager application and IB documentation that I made for my IB Computer Science IA. I scored a 32/34 (7) from my teacher but was moderated by IB to be a 5 (yikes!!). Regardless, I hope you find this helpful if you are currently working on your IB CS IA (please do not copy directly). Also, if you are interested in other preparation resources I have prepared, including markschemes, check out this Google Drive folder: https://drive.google.com/drive/folders/1tOUggjBXtlpGN7V_oXN7soLkTNKjVDiH?usp=sharing
 
 Features include:
 - A master password is required to access the main menu; the user can create one if one
