@@ -1,6 +1,5 @@
 # Java Password Manager
-This is a password manager application and IB documentation that I made for my IB Computer Science IA. It scored a 32/34 (7) from my teacher but was moderated by IB to be a 25/34 (6). Regardless, I hope you find this helpful if you are currently working on your IB CS IA (please do not copy directly). Also, if you are interested in other preparation resources I have prepared, including markschemes, check out this Google Drive folder: https://drive.google.com/drive/folders/1tOUggjBXtlpGN7V_oXN7soLkTNKjVDiH?usp=sharing
-
+This is a password manager application made in Java.
 Features include:
 - A master password is required to access the main menu; the user can create one if one
 does not exist.
@@ -16,7 +15,7 @@ program will display a message when a password is about to expire.
 key.
 - A password scan feature to identify any weak passwords that are being used.
 
-## Usage
+## Rock You
 
 The rockyou.txt file is a placeholder due to file size limitations; you will need to download the original from https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt if you wish to have full functionality.
 
